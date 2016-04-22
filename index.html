@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <title>Finest Finance</title>
+      <link href='https://fonts.googleapis.com/css?family=Archivo+Narrow' rel='stylesheet' type='text/css'>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+      <link href="css/bootstrap.min.css" rel="stylesheet">
+      <link href="css/style.css" rel="stylesheet">
+      <link href="css/media-Style.css" rel="stylesheet">
+      <link href="./css/flattyshadow.css" rel="stylesheet">
+   </head>
+   <body id="mainColor">
+      <!-- Navigation -->
+      <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+         <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+               <span class="sr-only">Toggle navigation</span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               </button>
+               <a class="navbar-brand" href="./index.html"><img src="./img/logo.png" href="/index.html" ></a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+               <ul id="menu" class="nav navbar-nav">
+                  <li>
+                     <a href="./latest-values.html"><i class="fa fa-gbp"></i> Latest Values</a>
+                  </li>
+                  <li>
+                     <a href="./news.html"><i class="fa fa-newspaper-o"></i> Latest News</a>
+                  </li>
+               </ul>
+            </div>
+            <!-- navbar-collapse -->
+         </div>
+         <!-- container -->
+      </nav>
+      <div class="row">
+	  <!-- Parallax img  -->
+      <div id="top" class="bgimg top-content1" data-stellar-background-ratio="0.5" style="background-position: 0px 0px;">
+		 <!-- layer to make bg img darker (cool)  -->
+         <div style="background-color: rgba(0,0,0,.64);">
+            <div class="container" >
+               <div class="row">
+                  <div class="col-sm-8 col-sm-offset-2 text">
+                     <br><br>
+                     <div class="visible-sm"><br><br></div>
+                     <div class="visible-lg"><br><br></div>
+                     <br><br>  
+                     <div class="hidden-xs row">
+                        <br><br><br><br>
+                     </div>
+                     <a href="./index.html"><img src="./img/logo.png" href="/index.html" class=" wow fadeInRightBig animated" alt="" height="100" width="100" style=""></a>  
+                     <h1 class="wow fadeInLeftBig animated" style="">Finest Finance<strong><br></strong></h1>
+                     <div class="description ">
+                        <p>Take advantage of real time news and market values 24/7</p>
+                        <br>  <br>
+                        <div class="visible-sm"><br><br></div>
+                        <div class="hidden-xs row">
+                           <br><br><br><br><br><br>
+                        </div>
+                     </div>
+                     <br><br><br><br><br><br> <br><br><br><br>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+	  <!-- Whats hot section -->
+      <div class="container">
+         <div class="row mainBoxes">
+            <h1>What's HOT today</h1>
+			<!-- Divide grid in 4 equal spaces, getting external values from stockQuote.js -->
+            <div class="hotStock col-xs-3">
+               Twitter:  <span class="stock-quote" data-symbol="TWTR"></span>
+            </div>
+            <div class="hotStock col-xs-3">
+               Facebook: <span class="stock-quote" data-symbol="FB"></span>
+            </div>
+            <div class="hotStock col-xs-3">
+               Google:   <span class="stock-quote" data-symbol="GOOGL"></span>
+            </div>
+            <div class="hotStock col-xs-3">
+               Yahoo:    <span class="stock-quote" data-symbol="YHOO"></span>
+            </div>
+			<!--  -->
+            <div class="row">
+               <div class="col-xs-12 col-sm-6 mainBoxes" >
+                  <a href="./news.html">
+                     <div class="flatty_shadow">
+                        <i class="fa fa-newspaper-o"></i>
+                     </div>
+                     <h3>Financial News</h3>
+                     <p>Read real-time world news about finance.</p>
+                  </a>
+               </div>
+               <div class="col-xs-12 col-sm-6 mainBoxes"  >
+                  <a href="./latest-values.html">
+                     <div class="flatty_shadow">
+                        <i class="fa fa-line-chart"></i>
+                     </div>
+                     <h3>Latest Values</h3>
+                     <p>Get up to date values about currencies and metals.</p>
+                     <br>
+                  </a>
+               </div>
+            </div>
+         </div>
+      </div>
+	  <!-- html5 tag footer, include link to social networks + branding at the bottom -->
+      <footer>
+         <div class="row" id="footerStyle">
+            <a style="margin-top: 4px; padding-top: 5px;" href="#"><i class="fa fa-linkedin"></i></a>
+            <a style="margin-top: 4px; padding-top: 5px;" href="#"><i class="fa fa-facebook"></i></a>
+            <a style="margin-top: 4px; padding-top: 5px;" href="#"><i class="fa fa-twitter"></i></a>
+            <a style="margin-top: 4px; padding-top: 5px;" href="#"><i class="fa fa-instagram"></i></a>
+            <p style=" color:#fff;  margin-top: 10px;">© <a href="/index.html" style="color:#fff;font-size: 15px;">Finest Finance</a> 2016.All rights reserved.</p>
+         </div>
+      </footer>
+	  <!-- JavaScript imports -->
+      <script src="js/jquery.js"></script>
+      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+      <script src="js/flattyshadow.js"></script>
+      <script type="text/javascript" src="assets/jquery.stockquotes.js"></script>
+      <script src="js/index.js"></script>
+      <!-- Bootstrap Core JavaScript -->
+      <script src="js/bootstrap.min.js"></script>
+   </body>
+</html>

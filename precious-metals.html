@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!-- Meta tags -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+      <title>Precious Metals</title>
+      <!-- Css imports -->
+      <link href='https://fonts.googleapis.com/css?family=Archivo+Narrow' rel='stylesheet' type='text/css'>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+      <link href="./css/bootstrap.min.css" rel="stylesheet">
+      <link href="./css/style.css" rel="stylesheet">
+      <link href="./css/media-Style.css" rel="stylesheet">
+      <link href="./css/flattyshadow.css" rel="stylesheet">
+   </head>
+   <body id="valueBody">
+      <!-- Navigation bar -->
+      <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+         <!-- Brand and toggle get grouped for better mobile display -->
+         <div class="container">
+            <div class="navbar-header">
+               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+               <span class="sr-only">Toggle navigation</span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               </button>
+               <a class="navbar-brand" href="./index.html"><img src="./img/logo.png" href="./index.html" ></a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+               <ul class="nav navbar-nav">
+                  <!-- This part of the menu can only be viewed on mobile! -->
+                  <li  class="visible-xs"><a  href="./precious-metals.html">Gold</a></li>
+                  <li  class="visible-xs"><a  href="./precious-metals.html">Silver</a></li>
+                  <li  class="visible-xs"><a  href="./precious-metals.html">Platinum</a> </li>
+                  <li  class="visible-xs"><a  href="./precious-metals.html">Copper</a></li>
+                  <li  class="visible-xs"><a href="./latest-values.html">Back</a></li>
+                  <li>
+                     <a href="./news.html"><i class="fa fa-newspaper-o"></i> Latest News</a>
+                  </li>
+                  <li>
+                     <a href="./index.html"><i class="fa fa-home"></i> Home</a>
+                  </li>
+               </ul>
+            </div>
+         </div>
+         <!-- /.navbar-collapse -->
+      </nav>
+      <div class="loader" >
+         <div class="loader-img" ></div>
+      </div>
+      <!-- Page Content -->
+      <div class="row">
+         <!-- Div hidden in xs -->
+         <div class="hidden-xs">
+			<!-- Lateral Menu -->
+            <div id="valuesLateral" class="col-sm-3 col-md-2 sidebar">
+               <ul id="lateral" class="nav nav-sidebar">
+                  <li id="gold"><a href="./precious-metals.html">Gold</a></li>
+                  <li id="silver"><a href="./precious-metals.html">Silver</a></li>
+                  <li id="platinum"><a href="./precious-metals.html">Platinum</a></li>
+                  <li id="copper"><a href="./precious-metals.html">Copper</a></li>
+                  <li><a href="./latest-values.html"	>Back</a></li>
+               </ul>
+            </div>
+         </div>
+		 <!-- Central space -->
+         <div  class="col-xs-12 col-sm-offset-3  col-sm-9 col-md-10 col-md-offset-2 ">
+            <div id="information"><span id="info"></span></div>
+			<!-- name of page is loaded dyanmically - uses jquery 2 replace #title's text + add individual color class unique to each page -->
+            <h1 class="page-header">Precious Metals > <span id="title">Title here</span></h1>
+            <button id="add" class="btn btn-outline-inverse "><i class="fa fa-plus"></i> Add to watchlist</button>
+            <div class="container">
+               <br>
+               <div class="col-xs-12">
+				  <!-- Widget must be present in html body -->
+                  <script type="text/javascript" src="https://d33t3vvu2t2yu5.cloudfront.net/tv.js"></script>
+                  <script type="text/javascript">
+					 <!-- used to acknowledge wich link was clicked from page-to-page -->
+                     var name = localStorage.getItem("clicked");
+                     
+                     var param='';
+					 <!-- Conditionals here -->
+                     if(name == "gold"){
+					 <!-- param = type of graph to be displayed -->
+                     param = 'NASDAQ:GOLD';
+                     
+                     }
+                     else if(name == "silver"){
+                     param = 'SILVERO';
+                     
+                     }
+                     else if(name == "platinum"){
+                     param = 'XPTUSD';
+                     
+                     }
+                     else if(name == "copper"){
+                     param = 'COPPER';
+                     }
+                     else{}
+					 <!-- Graph code -->
+                     new TradingView.widget({"width": 980, "height": 610, "symbol": param, "interval": "D", "timezone": "Etc/UTC", "theme": "White", "style": "1", "locale": "en", "toolbar_bg": "#f1f3f6", "allow_symbol_change": true, "hideideas": true, "show_popup_button": true, "popup_width": "1000", "popup_height": "650", "no_referral_id": true});
+                     
+                  </script>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- jquery import -->
+      <script src="./js/jquery.js"></script>
+	  <!-- Shadows effect -->
+      <script src="./js/flattyshadow.js"></script>
+      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+      <!-- Bootstrap Core JavaScript -->
+      <script src="./js/bootstrap.min.js"></script>
+	  <!-- main.js loads core functionality - add to watchlist, id names, etc.. ( also to avoid code repetition) -->
+      <script src="./js/main.js"></script>
+	  <!-- js that handles button text changes, information changes, menu etc.. -->
+      <script src="./js/individualPage.js"></script>
+   </body>
+</html>
